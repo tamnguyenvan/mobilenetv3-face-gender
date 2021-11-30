@@ -35,7 +35,7 @@ except ImportError:
 
 
 def get_dataset(name, image_set, transform, data_path):
-    paths = {"coco": (data_path, get_coco, 91), "coco_kp": (data_path, get_coco_kp, 2)}
+    paths = {"coco": (data_path, get_coco, 2), "coco_kp": (data_path, get_coco_kp, 2)}
     p, ds_fn, num_classes = paths[name]
 
     ds = ds_fn(p, image_set=image_set, transforms=transform)
